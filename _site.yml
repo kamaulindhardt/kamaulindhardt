@@ -12,7 +12,7 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
-    - text: "blog"
+    - text: "Blog"
       href: blog.html
     - icon: fab fa-github
       href: https://github.com/kamaulindhardt
