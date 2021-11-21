@@ -6,7 +6,7 @@ output_dir: "_site"
 navbar:
   logo:
     image: images/mkklindhardt.jpg
-    href: https://era.ccafs.cgiar.org/about/
+    href: https://www.linkedin.com/in/magnus-kamau-lindhardt/
   right:
     - text: "Home"
       href: index.html
@@ -15,7 +15,7 @@ navbar:
     - text: "blog"
       href: blog.html
     - icon: fab fa-github
-      href: https://github.com/kamaulindhardt/ERA_Agroforestry_destill_website
+      href: https://github.com/kamaulindhardt
     - icon: fa fa-twitter
       href: https://twitter.com/KamauLindhardt
     - icon: fa fa-linkedin
