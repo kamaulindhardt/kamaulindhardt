@@ -7,9 +7,3 @@ description: |
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
-```{r}
-knitr::include_graphics(here::here("images/mkklindhardt.jpg"), 3)
-```
-
-I am passionate about resilient and sustainable agriculture and land-use systems by levering on the potentials of data -and geospatial sciences and applied agroecological knowledge for people and planet. 
