@@ -1,7 +1,7 @@
 ---
 title: "Kamau Lindhardt"
 description: |
-  Some additional details about the website
+  #agroforestry #rspatial #gis #agroecology #systemsthinking #r #remotesensing
 bibliography: Mylibrary.bib
 csl: frontiers-in-ecology-and-the-environment.csl
 output: 
@@ -11,17 +11,14 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
 ```
 
+# Welcome to my website
 
-# Education
+I am passionate about resilient and sustainable agriculture and land-use systems. I study these by levering on my interdisciplinary knowledge in the fields of data -and geospatial sciences and agroecology. Through holistic systems-thinking I hope to contribute to a better world for people and planet. I am an enthusiastic advocate for agroforestry as an integrated and resilient practice and currently I am expanding my knowledge in spatial analysis in R to better understand the spatial, temporal and phenological benefits of agroforestry in relation to the associated crops.
 
-# Experiance
+# My resume 
 
-# Current activities
+Please visit my detailed [resume](https://drive.google.com/file/d/1oHOkxfmN73BzY1tNirlmP1wzPMfo-HbJ/view?usp=sharing) for more information
 
-MSc in Plant Sciences and Geo-Information Sciences at Wageningen University in the Netherlands and research fellow/intern at [CIFOR-ICRAF](https://www.cifor-icraf.org/) the [World Agroforestry Centre](https://new.worldagroforestry.org/about-us), Nairobi Kenya.
+
