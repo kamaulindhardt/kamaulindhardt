@@ -1,9 +1,0 @@
----
-title: "About me"
-description: |
-  Some additional details about the website
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
