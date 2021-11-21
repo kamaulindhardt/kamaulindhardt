@@ -9,7 +9,7 @@ navbar:
     href: https://kamaulindhardt.netlify.app/
   right:
     - text: "About me"
-      href: index.html
+      href: about_me.html
     - text: "Blog"
       href: blog.html
     - icon: fab fa-github
