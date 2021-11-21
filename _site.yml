@@ -1,12 +1,23 @@
 name: "kamaulindhardt"
-title: "kamaulindhardt"
+title: "Kamau Lindhardt"
 description: |
   kamaulindhardt
 output_dir: "_site"
 navbar:
+  logo:
+    image: images/mkklindhardt.jpg
+    href: https://era.ccafs.cgiar.org/about/
   right:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
+    - text: "blog"
+      href: blog.html
+    - icon: fab fa-github
+      href: https://github.com/kamaulindhardt/ERA_Agroforestry_destill_website
+    - icon: fa fa-twitter
+      href: https://twitter.com/KamauLindhardt
+    - icon: fa fa-linkedin
+      href: https://www.linkedin.com/in/magnus-kamau-lindhardt/
 output: distill::distill_article

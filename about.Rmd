@@ -1,5 +1,5 @@
 ---
-title: "About this site"
+title: "About me"
 description: |
   Some additional details about the website
 ---
@@ -8,3 +8,6 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+```{r}
+knitr::include_graphics(here::here("images/mkklindhardt.jpg"), 3)
+```

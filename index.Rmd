@@ -1,8 +1,12 @@
 ---
-title: "kamaulindhardt"
+title: "Kamau Lindhardt"
 description: |
-  Welcome to the website. I hope you enjoy it!
-site: distill::distill_website
+  Some additional details about the website
+bibliography: Mylibrary.bib
+csl: frontiers-in-ecology-and-the-environment.csl
+output: 
+  distill::distill_article:
+    number_sections: true
 ---
 
 ```{r setup, include=FALSE}
@@ -13,3 +17,16 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+
+# Education
+
+# Experiance
+
+# Current activities
+
+author:
+  - first_name: "Kamau"
+    last_name: "Lindhardt"
+    url: https://www.linkedin.com/in/magnus-kamau-lindhardt/
+    affiliation: MSc in Crop and Geo-Information Sciences at Wageningen University, The Netherlands and reseach fellow intern at The World Agroforestry Centre, Nairobi
+    affiliation_url: https://www.linkedin.com/in/magnus-kamau-lindhardt/
