@@ -24,9 +24,4 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Current activities
 
-author:
-  - first_name: "Kamau"
-    last_name: "Lindhardt"
-    url: https://www.linkedin.com/in/magnus-kamau-lindhardt/
-    affiliation: MSc in Crop and Geo-Information Sciences at Wageningen University, The Netherlands and reseach fellow intern at The World Agroforestry Centre, Nairobi
-    affiliation_url: https://www.linkedin.com/in/magnus-kamau-lindhardt/
+MSc in Plant Sciences and Geo-Information Sciences at Wageningen University in the Netherlands and research fellow/intern at [CIFOR-ICRAF](https://www.cifor-icraf.org/) the [World Agroforestry Centre](https://new.worldagroforestry.org/about-us), Nairobi Kenya.
