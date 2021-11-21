@@ -31,15 +31,19 @@ knitr::include_graphics(here::here("images/mkklindhardt.jpg"), 2)
 
 Wageningen University & Research is repeatedly ranked as the [top university](https://www.wur.nl/en/wageningen-university/rankings.htm) within the disciplines of agricultural sciences, plant and animal sciences, and environmental sciences and ecology. 
 
-**MSc Major Plant Sciences (Crop Science):** The Plant Sciences programme at WUR is internationally recognised. The programme has been designed to help meet the worldwide demand for scientific expertise in the development of plant and crop production and farming systems. It not only covers the technological aspects of crop production, but also deals with important environmental, quality, health and socio-economic aspects. Interdisciplinarity is a hallmark of the programme. Through various courses and real-life academic education, we get trainings on applying systems approaches that crucially integrates disciplinary knowledge to study plant production at various integration levels (plant, crop, farm, region). This requires sound understanding of the basic physical, chemical and physiological aspects of crop growth and production. Modelling and simulation are used to analyse and map yield constraints and improve production efficiency.
-
-**MSc Minor in Geo-Information Sciences:** The skills I've gained through the MSc Minor in Geo-Information Sciences gives me a solid understanding of applying key geo-information tools in the researh and development of agro-ecosystems for the benefit of production and society. Tools in Geo-information Sciences (GIS) provides indispensable opportunities for domains like spatial planning, agriculture, water management, nature conservation, environmental management, energy supply, disaster management, traffic and safety, etc. We are especially trained in applying combined use of earth observation techniques (Remote Sensing) and GIS for problem solving within the environmental, agricultural and social disciplines. We do this through modern computer software e.g. AcGIS, R and Python. 
-
-
-**BSc in Natural Resources:** This programme is a modern agronomy education that teaches strong scientific approaches within a social science perspective. We get trained in working in the interdisciplinary fields related to; plants, environmental legislation, ecology, biodiversity, economics and sustainability. The focus of the specialisation "Plant Science" is on the processes that form the basis for plant growth and plant production. Issues such as, how to deal with the biological, physical and chemical processes of plants? By learning to apply state-of-the-art knowledge on soil and climate factors, we are trained to research and solve complex problems in the field of sustainable production, consulting, breeding, research, teaching or industrial purposes. Hence, throughout the programme, there is a strong emphasis on; climate, resource utilization, soil, quality of plant-based raw materials and the ethical discussions about, for example, genetically modified plants.  
-
-
 # Experiance
+
+* Working on dairy farm
+* BSc thesis
+* Developing innovative, resilient and holistic farm-scale solution in Portugal
+* Working on several regenerative agroforestry projects in Brazil
+* Co-founder and manager of AgriKUA
+* MSc thesis
+* Co-created farm re-design in Belgium
+* Consultancy project on climate smart production using food forest design and sustainable land-use planning
+* Co-founder of Wageningen Youth for Landscape Forum (WUYLF)
+* Organising member of the Droevendaal Green Group, a ecological nature conservation group
+* fellow/intern at [CIFOR-ICRAF](https://www.cifor-icraf.org/) the [World Agroforestry Centre](https://new.worldagroforestry.org/about-us), Nairobi Kenya. Using machine learning to elucidate agroforestry performance based on environmental factors.
 
 # Current activities
 
@@ -84,3 +88,12 @@ leaflet() %>%
   addCircleMarkers(lat=11.191289819247272, lng=-73.48609877633677, popup="Palomino, Columbia",
                    radius = 5, color= "#e41a1c", fillOpacity = 0.8)
 ```
+
+# Details about my acedemic education
+
+**MSc Major Plant Sciences (Crop Science):** The Plant Sciences programme at WUR is internationally recognised. The programme has been designed to help meet the worldwide demand for scientific expertise in the development of plant and crop production and farming systems. It not only covers the technological aspects of crop production, but also deals with important environmental, quality, health and socio-economic aspects. Interdisciplinarity is a hallmark of the programme. Through various courses and real-life academic education, we get trainings on applying systems approaches that crucially integrates disciplinary knowledge to study plant production at various integration levels (plant, crop, farm, region). This requires sound understanding of the basic physical, chemical and physiological aspects of crop growth and production. Modelling and simulation are used to analyse and map yield constraints and improve production efficiency.
+
+**MSc Minor in Geo-Information Sciences:** The skills I've gained through the MSc Minor in Geo-Information Sciences gives me a solid understanding of applying key geo-information tools in the researh and development of agro-ecosystems for the benefit of production and society. Tools in Geo-information Sciences (GIS) provides indispensable opportunities for domains like spatial planning, agriculture, water management, nature conservation, environmental management, energy supply, disaster management, traffic and safety, etc. We are especially trained in applying combined use of earth observation techniques (Remote Sensing) and GIS for problem solving within the environmental, agricultural and social disciplines. We do this through modern computer software e.g. AcGIS, R and Python. 
+
+
+**BSc in Natural Resources:** This programme is a modern agronomy education that teaches strong scientific approaches within a social science perspective. We get trained in working in the interdisciplinary fields related to; plants, environmental legislation, ecology, biodiversity, economics and sustainability. The focus of the specialisation "Plant Science" is on the processes that form the basis for plant growth and plant production. Issues such as, how to deal with the biological, physical and chemical processes of plants? By learning to apply state-of-the-art knowledge on soil and climate factors, we are trained to research and solve complex problems in the field of sustainable production, consulting, breeding, research, teaching or industrial purposes. Hence, throughout the programme, there is a strong emphasis on; climate, resource utilization, soil, quality of plant-based raw materials and the ethical discussions about, for example, genetically modified plants.  
