@@ -1,0 +1,76 @@
+---
+title: "Kamau Lindhardt"
+description: |
+  #agroforestry #rspatial #gis #cropscience #agroecology #systemsthinking #r #remotesensing #sustainabledevelopment
+bibliography: Mylibrary.bib
+csl: frontiers-in-ecology-and-the-environment.csl
+output: 
+  distill::distill_article:
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Welcome to my website
+
+I am passionate about resilient and sustainable agriculture and land-use systems. I study these by levering on my interdisciplinary knowledge in the fields of data -and geospatial sciences and agroecology. Through holistic systems-thinking I hope to contribute to a better world for people and planet. I am an enthusiastic advocate for agroforestry as an integrated and resilient practice. Currently, I am expanding my knowledge in spatial (data) analysis in R to better understand the spatial, temporal and phenological benefits of agroforestry in relation to the associated crops. I use my experience from working with farmers and agricultural researchers, on multiple aspects of regenerative agroecology, to understand the complex social and economic aspects of agroforestry. 
+
+
+
+```{r}
+knitr::include_graphics(here::here("images/mkklindhardt.jpg"), 3)
+```
+
+# Education
+
+
+
+# Experiance
+
+# Current activities
+
+MSc in Plant Sciences and Geo-Information Sciences at Wageningen University in the Netherlands and research fellow/intern at [CIFOR-ICRAF](https://www.cifor-icraf.org/) the [World Agroforestry Centre](https://new.worldagroforestry.org/about-us), Nairobi Kenya.
+
+I am passionate about resilient and sustainable agriculture and land-use systems by levering on the potentials of data -and geospatial sciences and applied agroecological knowledge for people and planet. 
+
+# My resume 
+
+Please visit my detailed [resume](https://drive.google.com/file/d/1oHOkxfmN73BzY1tNirlmP1wzPMfo-HbJ/view?usp=sharing) for more information
+
+# Visited and worked on several projects 
+
+```{r, layout="l-page"}
+library(leaflet)
+leaflet() %>%
+  addProviderTiles(providers$Stamen.Toner) %>% #addTiles() %>%  for adding the default OpenStreetMap map tiles
+  addCircleMarkers(lat=51.98898077979246, lng=5.672499148123521, popup="Droevendaal community, the Netherlands", 
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>% 
+  addCircleMarkers(lat=52.510337793242506, lng=6.350982066565196, popup="Vilsteren, the Netherlands", 
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>% 
+  addCircleMarkers(lat=50.63001878484138, lng=3.4871419818508924, popup="Chèvrerie de la Croix de la Grise, Belgium", 
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>%
+  addCircleMarkers(lat=37.59476115588911, lng=-8.676547297111401, popup="Quinta Do Bogalho, Portugal", 
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>%
+  addCircleMarkers(lat=43.22862428111734, lng=12.324425184044149, popup="Umbria, Italy", 
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>%
+  addCircleMarkers(lat=55.68401794243163, lng=12.568431611372166, popup="Copenhagen, Denmark",
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>%
+  addCircleMarkers(lat=55.82650506158998, lng=9.944353540965297, popup="Sejet, Denmark",
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>%
+  addCircleMarkers(lat=55.29860093554827, lng=12.416204856881578, popup="Store Heddinge, Denmark",
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>%
+  addCircleMarkers(lat=0.28254711469619376, lng=34.748615658619826, popup="Kakamega, Kenya",
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>%
+  addCircleMarkers(lat=-3.866369853838473, lng=39.79723659036732, popup="Mtwapa, Kenya",
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>%
+  addCircleMarkers(lat=-0.19323998382782134, lng=37.04390323222484, popup="Naro Moru, Kenya",
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>%
+  addCircleMarkers(lat=-1.2364117492067783, lng=36.81888058423338, popup="Nairobi, Kenya",
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>%
+  addCircleMarkers(lat=-12.622386631925206, lng=-41.34541265577394, popup="Lençois, (Bahia) Brazil",
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8) %>%
+  addCircleMarkers(lat=11.191289819247272, lng=-73.48609877633677, popup="Palomino, Columbia",
+                   radius = 5, color= "#e41a1c", fillOpacity = 0.8)
+```
