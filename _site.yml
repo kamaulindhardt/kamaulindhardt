@@ -5,8 +5,8 @@ description: |
 output_dir: "_site"
 navbar:
   logo:
-    image: images/mkklindhardt.jpg
-    href: https://www.linkedin.com/in/magnus-kamau-lindhardt/
+    image: images/mkklindhardt_round.png
+    href: https://kamaulindhardt.netlify.app/
   right:
     - text: "Home"
       href: index.html
