@@ -18,7 +18,6 @@ knitr::opts_chunk$set(echo = FALSE)
 I am passionate about resilient and sustainable agriculture and land-use systems. I study these by levering on my interdisciplinary knowledge in the fields of data -and geospatial sciences and agroecology. Through holistic systems-thinking I hope to contribute to a better world for people and planet. I am an enthusiastic advocate for agroforestry as an integrated and resilient practice. Currently, I am expanding my knowledge in spatial (data) analysis in R to better understand the spatial, temporal and phenological benefits of agroforestry in relation to the associated crops. I use my experience from working with farmers and agricultural researchers, on multiple aspects of regenerative agroecology, to understand the complex social and economic aspects of agroforestry. 
 
 
-
 ```{r}
 knitr::include_graphics(here::here("images/mkklindhardt.jpg"), 2)
 ```

@@ -1,11 +1,12 @@
 ---
 title: "Playing around with the {SITS} package"
 description: |
-  A short description of the post.
+  In this blog post I am playing around with the package sits (Satellite Image Time Series Analysis for Earth Observation Data Cubes). 
 author:
   - name: Kamau Lindhardt
 date: 11-21-2021
 preview: sits_general_view.png
+draft: true
 output:
   distill::distill_article:
     self_contained: false
@@ -16,8 +17,164 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+# Introduction
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+Earth observation (EO) satellites provide a common and consistent set of information about the planet’s land and oceans. Recently, most space agencies have adopted open data policies, making unprecedented amounts of satellite data available for research and operational use. This data deluge has brought about a significant challenge: How to design and build technologies that allow the Earth observation community to analyze big data sets?
+
+In this blog post I am playing around with the package SITS (Satellite Image Time Series Analysis for Earth Observation Data Cubes). SITS, an open-source R package for satellite image time series analysis. It provides support on how to use machine learning techniques with image time series by using a time-first, space-later approach, where each spatial location is associated to a time series. A set of locations with known labels is used to train a machine learning classifiers. The resulting model is applied to the data cube and each time series is classified separately. After the classification, spatial smoothing methods capture information from neighbors.The package supports the complete cycle of data analysis for time series classification, including data acquisition, visualization, filtering, clustering, classification, validation, and post-processing.The sits R package provides a set of tools for analysis, visualization and classification of satellite image time series. The package supports classification of image data cubes using machine learning methods. The basic workflow in SITS is:
+
+1. Create a data cube using image collections available in the cloud or in local machines.
+2. Extract time series from the data cube which are used as training data.
+3. Perform quality control and filtering on the samples.
+4. Train a machine learning model using the extracted samples.
+5. Classify the data cube using the trained model.
+6. Post-process the classified images.
+7. Evaluate the accuracy of the classification using best practices.
+
+```{r, out.width="50%", fig.cap="Using time series for land classification (source: authors of SITS)"}
+knitr::include_graphics(here::here("_posts/2021-11-21-sits/sits_general_view.png"))
+```
+
+# Installing and loading the package and data
+
+**The SITS package can be downloaded and installed from GitHub:**
+
+```{r, eval=FALSE, echo=TRUE}
+devtools::install_github("e-sensing/sits", dependencies = TRUE)
+```
+
+**The “sitsdata” package, which contains all exemplary data:**
+
+```{r, eval=FALSE, echo=TRUE}
+devtools::install_github("e-sensing/sitsdata")
+```
+
+**Loading the sits package and data**
+
+```{r, eval=TRUE, echo=TRUE}
+library(sits)
+library(sitsdata)
+```
+
+**Installing/loading other packages**
+
+```{r}
+library(keras)
+```
+
+
+# 0.1 Creating a Data Cube
+
+**Creating a raster metadata file based on the information about the files**
+
+When building data cubes from images stored in a local machine, users need to provide information about the original source from with the data was downloaded. The reason to included such information is because there are no standards for the metadata used to process an image. Unfortunately, information such as band names, maximum/minimum values, and cloud pixels are set by the provider. When sits accesses local data, it needs to know where the data comes from. Hence the need to include origin and collection parameters when defining a local cube.
+
+```{r, eval=TRUE, echo=TRUE}
+data_dir <- system.file("extdata/sinop", package = "sitsdata")
+
+# create a raster metadata file based on the information about the files
+sinop_cube <- sits_cube(source = "LOCAL",
+                   origin = "BDC",
+                   collection  = "MOD13Q1-6",
+                   name = "Sinop",
+                   data_dir = data_dir,
+                   parse_info = c("X1", "X2", "tile", "band", "date")
+)
+```
+
+**Plotting an EVI band**
+
+Plotting the EVI band for the first date (2013-09-14)
+
+```{r}
+# plot the EVI band for the first date (2013-09-14)
+plot(sinop_cube, band = "EVI", time = 1)
+```
+
+The sits_cube() function defines a data cube, which is an organized collection of images covering a geographical area in a given time interval. Data cubes can be conceived as a 3D array of pixels, where each pixel is associated to a time series. All pixels share the same timeline and the same set of attributes (usually spectral bands). When a data cube is defined, the values of the images are not loaded in memory. The output of sits_cube() is a table which contains the metadata that describes the actual image data.
+
+
+# 0.2 The time series table
+
+To classify all of the time series associated to a data cube, sits uses machine learning models. To train the models, sits uses a tabular data structure that stores individual time series. The example below shows a table with 1,218 time series obtained from MODIS MOD13Q1 images. Each series has four attributes: two bands (“NIR” and “MIR”) and two indexes (“NDVI” and “EVI”).
+
+**load the MODIS samples for Mato Grosso from the "sitsdata" package**
+
+```{r}
+# load the MODIS samples for Mato Grosso from the "sitsdata" package
+# library(sitsdata)
+data("samples_matogrosso_mod13q1", package = "sitsdata")
+samples_matogrosso_mod13q1[1:10,]
+```
+
+The data structure associated to the time series is a table that contains data and metadata. The first six columns contain the metadata: spatial and temporal information, the label assigned to the sample, and the data cube from where the data has been extracted. The time_series column contains the time series data for each spatiotemporal location. This data is also organized as a table, with a column with the dates and the other columns with the values for each spectral band.
+
+It is useful to visualize the dispersion of the time series. In what follows, for brevity we will select only one label (“Forest”) and one index (“EVI”) to show. The resulting plot shows all of the time series associated to the label and attribute, highlighting the median and the first and third quartiles.
+
+```{r}
+samples_forest <- dplyr::filter(samples_matogrosso_mod13q1, label == "Forest")
+samples_pasture <- dplyr::filter(samples_matogrosso_mod13q1, label == "Pasture")
+samples_soy_corn <- dplyr::filter(samples_matogrosso_mod13q1, label == "Soy_Corn")
+
+samples_forest_ndvi <- sits_select(samples_forest, band = "NDVI")
+samples_pasture_ndvi <- sits_select(samples_pasture, band = "NDVI")
+samples_soy_corn_ndvi <- sits_select(samples_soy_corn, band = "NDVI")
+
+```
+
+
+```{r}
+plot(samples_forest_ndvi)
+```
+```{r}
+plot(samples_pasture_ndvi)
+```
+```{r}
+plot(samples_soy_corn_ndvi)
+```
+
+
+# 0.3 Training a machine learning model
+
+After obtaining the time series, the next step is to select a suitable subset to use as training samples for a machine learning model. In this case, the time series data has four attributes (“EVI,” “NDVI,” “NIR,” “MIR”) and the data cube is composed only with data from the “NDVI” and “EVI” indexes. We extract the “NDVI” and “EVI” indexes from the time series data set and use the resulting data for training a model. To build the classification model, we have chosen sits_TempCNN() from the methods available. This method implements a 1D convolution neural network^[C. Pelletier, G. I. Webb, and F. Petitjean, “Temporal Convolutional Neural Network for the Classification of Satellite Image Time Series,” Remote Sensing, vol. 11, no. 5, 2019.]. After training the model, we plot the result to how well it has converged to match the input data.
+
+**select the bands "ndvi", "evi" train machine learning classification model**
+```{r}
+# select the bands "ndvi", "evi"
+samples_2bands <- sits_select(samples_matogrosso_mod13q1, bands = c("NDVI", "EVI"))
+
+#select a tempCNN model
+tcnn_model <- sits_train(data = samples_2bands, 
+                        ml_method = sits_TempCNN())
+```
+```{r}
+plot(tcnn_model)
+```
+
+
+# 0.4 Data cube classification
+
+The next step is to classify the data cube. This is achieved by using the sits_classify() function. The classification produces a set of probability maps, one for each class. For each map, the value of a pixel is proportional to the the probability that it belongs to the class. To visualize the result, we plot the probability maps. In the example below, we show the maps of two classes (“Forest” and “Pasture”).
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
