@@ -111,12 +111,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","preview","draft","output"]}},"value":[{"type":"character","attributes":{},"value":["Playing around with the {SITS} package"]},{"type":"character","attributes":{},"value":["In this blog post I am playing around with the package sits (Satellite Image Time Series Analysis for Earth Observation Data Cubes). \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Kamau Lindhardt"]}]}]},{"type":"character","attributes":{},"value":["11-21-2021"]},{"type":"character","attributes":{},"value":["sits_general_view.png"]},{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","preview","draft","output"]}},"value":[{"type":"character","attributes":{},"value":["Playing around with the {SITS} package"]},{"type":"character","attributes":{},"value":["In this blog post I am playing around with the package sits (Satellite Image Time Series Analysis for Earth Observation Data Cubes). \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Kamau Lindhardt"]}]}]},{"type":"character","attributes":{},"value":["11-21-2021"]},{"type":"character","attributes":{},"value":["sits_general_view.png"]},{"type":"logical","attributes":{},"value":[true]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["sits_files/figure-html5/unnamed-chunk-10-1.png","sits_files/figure-html5/unnamed-chunk-11-1.png","sits_files/figure-html5/unnamed-chunk-12-1.png","sits_files/figure-html5/unnamed-chunk-14-1.png","sits_files/figure-html5/unnamed-chunk-7-1.png","sits_general_view.png"]}
+  {"type":"character","attributes":{},"value":["sits_api.png","sits_files/anchor-4.2.2/anchor.min.js","sits_files/bowser-1.9.3/bowser.min.js","sits_files/distill-2.2.21/template.v2.js","sits_files/figure-html5/unnamed-chunk-10-1.png","sits_files/figure-html5/unnamed-chunk-11-1.png","sits_files/figure-html5/unnamed-chunk-12-1.png","sits_files/figure-html5/unnamed-chunk-14-1.png","sits_files/figure-html5/unnamed-chunk-15-1.png","sits_files/figure-html5/unnamed-chunk-16-1.png","sits_files/figure-html5/unnamed-chunk-17-1.png","sits_files/figure-html5/unnamed-chunk-7-1.png","sits_files/header-attrs-2.11/header-attrs.js","sits_files/jquery-3.6.0/jquery-3.6.0.js","sits_files/jquery-3.6.0/jquery-3.6.0.min.js","sits_files/jquery-3.6.0/jquery-3.6.0.min.map","sits_files/popper-2.6.0/popper.min.js","sits_files/tippy-6.2.7/tippy-bundle.umd.min.js","sits_files/tippy-6.2.7/tippy-light-border.css","sits_files/tippy-6.2.7/tippy.css","sits_files/tippy-6.2.7/tippy.umd.min.js","sits_files/webcomponents-2.0.0/webcomponents.js","sits_general_view.png","TERRA_MODIS_012010_2013-09-14_2014-08-29_class_v1.tif","TERRA_MODIS_012010_2013-09-14_2014-08-29_probs_bayes_v1.tif","TERRA_MODIS_012010_2013-09-14_2014-08-29_probs_v1.tif"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1593,9 +1593,34 @@ Figure 1: Using time series for land classification (source: authors of SITS)
 <h1 id="data-cube-classification">0.4 Data cube classification</h1>
 <p>The next step is to classify the data cube. This is achieved by using the sits_classify() function. The classification produces a set of probability maps, one for each class. For each map, the value of a pixel is proportional to the the probability that it belongs to the class. To visualize the result, we plot the probability maps. In the example below, we show the maps of two classes (“Forest” and “Pasture”).</p>
 <div class="layout-chunk" data-layout="l-body">
+<p><img src="sits_files/figure-html5/unnamed-chunk-15-1.png" width="624" /></p>
+</div>
+<h1 id="spatial-smoothing">0.5 Spatial smoothing</h1>
+<p>When working with big EO data sets, there is a considerable degree of data variability in each class. As a result, some pixels will be misclassified. These errors are more likely to occur in transition areas between classes or when dealing with mixed pixels. To offset these problems, sits includes a post-processing smoothing method based on Bayesian probability. The sits_smooth() function uses information from a pixel’s neighborhood to reduce uncertainty about its label, which is illustrated below. After smoothing, we plot the probability maps for classes “Forest” and “Pasture” to compare with the previous plot.</p>
+<p>perform spatial smoothing</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="sits_files/figure-html5/unnamed-chunk-16-1.png" width="624" /></p>
+</div>
+<h1 id="labelling-a-probability-data-cube">0.6 Labelling a probability data cube</h1>
+<p>After removing outliers using local smoothing, one can obtain the labeled classification map using the function sits_label_classification(). This function assigns each pixel to the class with highest probability.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="sits_files/figure-html5/unnamed-chunk-17-1.png" width="624" /></p>
+</div>
+<p>The resulting classification files can be read by QGIS. Links to the associated files are available in the sinop_label table in the column file_info.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code># A tibble: 1 × 5
+  band  start_date end_date     res path                              
+  &lt;chr&gt; &lt;date&gt;     &lt;date&gt;     &lt;dbl&gt; &lt;chr&gt;                             
+1 CLASS 2013-09-14 2014-08-29  232. ./TERRA_MODIS_012010_2013-09-14_2…</code></pre>
+</div>
+<h1 id="how-the-sits-api-works">0.7 How the sits API works</h1>
+<p>The core functions of the sits API are presented in Figure 0.7. Each function carries out one task of the land classification workflow. These functions are: (a) sits_cube() which creates a cube; (b) sits_get_data() which extracts training data from the cube; (c) sits_train() that trains a machine learning model; (d) sits_classify() which classifies the cube; (e) sits_smooth() that does the spatial smoothing; and (f) sits_label_classication() that produces the final labelled image. These six functions encapsulate the core of the package.</p>
+<div class="layout-chunk" data-layout="l-body">
 
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h1 id="final-remarks">0.8 Final remarks</h1>
+<p>The sits package provides an API to build EO data cubes from image collections available in cloud services, and to perform land classification of data cubes using machine learning. The classification models are built based on satellite image time series extracted from the cubes. The package provides additional function for sample quality control, post-processing and validation. The design of the API tries to reduce complexity for users and hide details such as how to do parallel processing, and to handle data cubes composed by tiles of different timelines.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
