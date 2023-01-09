@@ -3,4 +3,5 @@ title: "Blog"
 listing: 
   posts:
     2021-11-21-sits
+    2023-01-09-new-job
 ---
