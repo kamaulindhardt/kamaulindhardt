@@ -15,10 +15,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Welcome to my website
 
-
-bla bla bla test
-
-
 I am passionate about resilient and sustainable agriculture and land-use systems. I study these by levering on my interdisciplinary knowledge in the fields of data -and geospatial sciences and agroecology. Through holistic systems-thinking I hope to contribute to a better world for people and planet. I am an enthusiastic advocate for agroforestry as an integrated and resilient practice. Currently, I am expanding my knowledge in spatial (data) analysis in R to better understand the spatial, temporal and phenological benefits of agroforestry in relation to the associated crops. I use my experience from working with farmers and agricultural researchers, on multiple aspects of regenerative agroecology, to understand the complex social and economic aspects of agroforestry. 
 
 
@@ -36,17 +32,19 @@ Wageningen University & Research is repeatedly ranked as the [top university](ht
 
 # Experiance
 
-* Working on dairy farm
+* MSc Thesis intitled: "Current research on temperate silvoarable agroforestry and associated ecosystem services: A systematic mapping review"
+* Research Fellow (Intern) at [CIFOR-ICRAF](https://www.cifor-icraf.org/) the [World Agroforestry Centre](https://new.worldagroforestry.org/about-us), Nairobi Kenya. Using machine learning to elucidate agroforestry performance based on environmental factors.
 * BSc thesis
 * Developing innovative, resilient and holistic farm-scale solution in Portugal
 * Working on several regenerative agroforestry projects in Brazil
 * Co-founder and manager of AgriKUA
-* MSc thesis
+
 * Co-created farm re-design in Belgium
 * Consultancy project on climate smart production using food forest design and sustainable land-use planning
 * Co-founder of Wageningen Youth for Landscape Forum (WUYLF)
 * Organising member of the Droevendaal Green Group, a ecological nature conservation group
-* fellow/intern at [CIFOR-ICRAF](https://www.cifor-icraf.org/) the [World Agroforestry Centre](https://new.worldagroforestry.org/about-us), Nairobi Kenya. Using machine learning to elucidate agroforestry performance based on environmental factors.
+
+* Full time employed on a dairy farm - dealing with daily operations in both field and stable (milking, field activities, feed preperations) 
 
 # Current activities
 
