@@ -4,7 +4,7 @@ description: |
   In this blog post I am playing around with the package sits (Satellite Image Time Series Analysis for Earth Observation Data Cubes). 
 author:
   - name: Kamau Lindhardt
-date: 21-11-2021
+date: 11-21-2021
 preview: sits_general_view.png
 draft: true #false
 output:
