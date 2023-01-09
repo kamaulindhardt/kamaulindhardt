@@ -26,7 +26,7 @@ knitr::include_graphics(here::here("images/mkklindhardt.jpg"), 2)
 
 * Masters Degree (MSc) Major in Plant Sciences, with a specialisation in Crop Science (Agronomy) with a MSc Minor in Geo-Information Sciences, both from [Wageningen University & Research (WUR)](https://www.wur.nl/en.htm) in Wageningen, the Netherlands.  
 
-* I hold a Bachelors Degree (BSc) in Natural Resources (Danish: "Naturressourcer), with a specialisation in Plant Sciences from [University of Copenhagen (UoC)](https://www.ku.dk/english/) in Copenhagen, Denmark. 
+* Bachelors Degree (BSc) in Natural Resources (Danish: "Naturressourcer), with a specialisation in Plant Sciences from [University of Copenhagen (UoC)](https://www.ku.dk/english/) in Copenhagen, Denmark. 
 
 Wageningen University & Research is repeatedly ranked as the [top university](https://www.wur.nl/en/wageningen-university/rankings.htm) within the disciplines of agricultural sciences, plant and animal sciences, and environmental sciences and ecology. 
 
