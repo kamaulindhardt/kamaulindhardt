@@ -28,12 +28,9 @@ knitr::include_graphics(here::here("images/mkklindhardt.jpg"), 2)
 
 * Bachelors Degree (BSc) in Natural Resources (Danish: "Naturressourcer), with a specialisation in Plant Sciences from [University of Copenhagen (UoC)](https://www.ku.dk/english/) in Copenhagen, Denmark. 
 
-```{r}
 <aside>
 Wageningen University & Research is repeatedly ranked as the [top university](https://www.wur.nl/en/wageningen-university/rankings.htm) within the disciplines of agricultural sciences, plant and animal sciences, and environmental sciences and ecology.
 </aside>
-```
-
 
 # Experiance
 
