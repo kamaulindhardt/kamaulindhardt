@@ -6,10 +6,10 @@ author:
   - name: Kamau Lindhardt
 date: 11-21-2021
 preview: sits_general_view.png
-draft: true #false
+draft: false #false
 output:
   distill::distill_article:
-    self_contained: false
+    self_contained: true
 ---
 
 

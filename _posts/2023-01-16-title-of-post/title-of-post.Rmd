@@ -1,14 +1,13 @@
 ---
-title: "New Job"
+title: "title of post"
 description: |
   A short description of the post.
 author:
   - name: Kamau Lindhardt
-date: 01-09-2023
-draft: false #false
+date: 01-16-2023
 output:
   distill::distill_article:
-    self_contained: true
+    self_contained: false
 ---
 
 

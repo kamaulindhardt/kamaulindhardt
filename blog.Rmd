@@ -1,7 +1,9 @@
 ---
 title: "Blog"
+site: distill::distill_website
 listing: 
   posts:
-    2021-11-21-sits
-    2023-01-09-new-job
+    - 2023-01-09-new-job
+    - 2023-01-16-title-of-post
+    - 2021-11-21-sits
 ---

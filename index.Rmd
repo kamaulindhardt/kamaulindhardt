@@ -34,12 +34,18 @@ Wageningen University & Research is repeatedly ranked as the [top university](ht
 
 # Current activities
 
-Currently I am working as a scientific GIS officer at the [Danish Agricultural Agency](https://eng.lbst.dk/about-us) (Ministry of Food, Agriculture and Fisheries). I work in Team Satellite & GIS under the division Agricultural Support & Geodata. Here I work in the project called "[New Regulation Model](https://lbst.dk/tvaergaaende/ny-reguleringsmodel-for-landbruget/), with the development of new tools that ensure better monitoring and regulation of Danish agriculture – to the benefit of both the climate, nature, and farmers. Specifically, I work with new maps and GIS analysis, which will support more farm/field-specific calculations of the climate and environmental impacts of agriculture.
+Currently I am working as a scientific GIS officer at the [Danish Agricultural Agency](https://eng.lbst.dk/about-us) (Ministry of Food, Agriculture and Fisheries). I work in Team Satellite & GIS under the division Agricultural Support & Geodata. Here I work in the project called "[New Regulation Model](https://lbst.dk/tvaergaaende/ny-reguleringsmodel-for-landbruget/), with the development of new tools that ensure better monitoring and regulation of Danish agriculture – to the benefit of both the climate, nature, and farmers. Specifically, I work with new maps and GIS analysis, which will support more farm/field-specific calculations of the climate and environmental impacts of agriculture. 
+
+<aside>
+```{r}
+knitr::include_graphics(here::here("images/LBST_eng.png"), 2)
+```
+</aside>
 
 # Experience
 
 * MSc Thesis titled: "Current research on temperate silvoarable agroforestry and associated ecosystem services: A systematic mapping review" publicly available [here](https://library.wur.nl/WebQuery/theses).
-Second MSc Thesis titled: "Assessing Mobile Phone Based Data Collection Methodologies In the Context of Tailored Agricultural Decision Support Tools - CASE: The Pilot Testing of the Maize-Seed-Area Application – A Novel Advisory Tool on Maize Variety Selection and Plant Density In Western Kenya"
+* Second MSc Thesis titled: "Assessing Mobile Phone Based Data Collection Methodologies In the Context of Tailored Agricultural Decision Support Tools - CASE: The Pilot Testing of the Maize-Seed-Area Application – A Novel Advisory Tool on Maize Variety Selection and Plant Density In Western Kenya"
 * Research Fellow (Intern) at [CIFOR-ICRAF](https://www.cifor-icraf.org/) the [World Agroforestry Centre](https://new.worldagroforestry.org/about-us), Nairobi Kenya. Using machine learning to elucidate agroforestry performance based on environmental factors.
 * BSc Thesis titled: "Sustainable Use of Epichloë Endophytes in Forage Grass Breeding and Cultivation" publicly available [here](https://drive.google.com/file/d/1WcE1sY7_QgwwSAbD1YoSvvqd6eSuIRfJ/view?usp=sharing).  
 * Developing innovative, resilient and holistic farm-scale solution in Portugal at Quinta do Bogalho, Odemira.
