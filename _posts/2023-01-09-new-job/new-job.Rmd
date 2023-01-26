@@ -16,8 +16,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+# My New Job at the Danish Agricultural Agency - Ministry of Food, Agriculture and Fisheries
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
-
+My recent job at the Danish Agricultural Agency under the Ministry of Food, Agriculture and Fisheries, is a drema position for anyone with a passion for agroecosystems and geo-information sciences. I am working along side  
 
